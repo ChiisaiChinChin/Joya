@@ -1,0 +1,86 @@
+<!DOCKTYPE html>
+<html lang="he-IL" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>Joya Cosmetics | צור קשר</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section>
+      <nav>
+          <button class="Btn" onclick="document.location='html.index.html'">
+              <b>בית</b>
+          </button>
+          <!-- Company Brands DropDown Menu-->
+          <div class="DropDown">
+              <button class="DropDownBtn">
+                  <b>מותגי החברה</b>
+              </button>
+              <div class="DropDownContent">
+                  <a href="Joya.html">Joya</a>
+                  <a href="MaroccanCollection.html">סדרת מרוקאית</a>
+                  <a href="KeratinCollection.html">סדרת הקראטין</a>
+                  <a href="OblipichaCollection.html">סדרת אובליפיחה</a>
+                  <a href="PishtanCollection.html">סדרת הפשתן</a>
+              </div>
+          </div>
+          <!-- Contact Us Button-->
+          <button class="Btn"   style="background-color: var(--main-dark);color: var(--secondery-absent);b{opacity: 1;}" onclick="document.location='ContactUs.html'" >
+              <b>צור קשר</b>
+          </button>
+          <!--Icon-->
+          <h3 class="NavBarIcon">Joya Cosmetics</h3>
+      </nav>
+  </section>
+  <main>
+      <fieldset id="Contact_Form">
+          <form action="https://formsubmit.co/Pupchikis17@gmail.com" method="post">
+
+              <label for="firstName">השם שלך:</label>
+              <input type="text" id="firstName" name="firstName" required>
+              <br>
+
+              <label for="email">אמייל:</label>
+              <input type="email" id="email" name="email" required>
+              <br>
+
+              <label for="message">הודעה:</label>
+              <textarea id="message" name="message" required></textarea>
+              <br>
+
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://localhost:63342/untitled2/ContactUs.html">
+
+              <input type="submit" id="Send" value="שלח">
+          </form>
+      </fieldset>
+  </main>
+<hr class="BottomLine">
+  <footer>
+      <div class="FooterLinksContainer">
+          <a href="html.index.html" class="FooterLinks">בית</a><br>
+          <a href="ContactUs.html" class="FooterLinks">צור קשר</a><br>
+          <a href="AboutUs.html" class="FooterLinks">אודותינו</a><br>
+      </div>
+      <div class="FooterLinksContainer">
+          <a href="Joya.html" class="FooterLinks">Joya</a><br>
+          <a href="MaroccanCollection.html" class="FooterLinks">סדרת מרוקאית</a><br>
+          <a href="KeratinCollection.html" class="FooterLinks">סדרת הקראטין</a><br>
+          <a href="OblipichaCollection.html" class="FooterLinks">סדרת אובליפיחה</a><br>
+          <a href="PishtanCollection.html" class="FooterLinks">סדרת הפשתן</a><br>
+      </div>
+      <h3 style="float: left; margin: 40px 20px 0 0; font-size: 70px; font-family: 'BIZ UDPMincho Medium'; color: #000000">Joya Cosmetics</h3>
+  </footer>
+</body>
+</html>
+
+<!--Code For Items
+    <fieldset class="Item_Fieldset" Id="MAKAT">
+        <img alt="name" src="png" height="300" width="250"/>
+        <h3> name </h3>
+
+        <article class="Product_Description">
+            <p class="AboutProduct">about</p><fieldset class="PriceContainer"><p class="Price">--₪</p></fieldset>
+        </article>
+    </fieldset>
+-->

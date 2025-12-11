@@ -1,0 +1,158 @@
+<!DOCKTYPE html>
+<html lang="he-IL" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Joya Cosmetics | ג'ויה</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body onload="PageLoaded()">
+      <nav>
+          <button class="Btn" onclick="document.location='html.index.html'">
+              <b>בית</b>
+          </button>
+          <!-- Company Brands DropDown Menu-->
+          <div class="DropDown">
+              <button class="DropDownBtn" style="background-color: var(--main-dark);color: var(--secondery-absent);b{opacity: 1;}">
+                  <b>מותגי החברה</b>
+              </button>
+              <div class="DropDownContent">
+                  <a href="MaroccanCollection.html">סדרת מרוקאית</a>
+                  <a href="KeratinCollection.html">סדרת הקראטין</a>
+                  <a href="OblipichaCollection.html">סדרת אובליפיחה</a>
+                  <a href="PishtanCollection.html">סדרת הפשתן</a>
+              </div>
+          </div>
+          <!-- Contact Us Button-->
+          <button class="Btn" onclick="document.location='ContactUs.html'" >
+              <b>צור קשר</b>
+          </button>
+          <!--Icon-->
+          <h3 class="NavBarIcon">Joya Cosmetics</h3>
+      </nav>
+      <main>
+          <fieldset class="search">
+              <input type="text" Id="Search" placeholder="חיפוש...">
+              <form>
+                  <label class="CoOp">פשתן<input type="checkbox" class="Collection" Id="PishtanCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">סדרת "מרוקאית"<input type="checkbox" class="Collection" Id="MoroccanCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">אובליפיחה<input type="checkbox" class="Collection" Id="OblipichaCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">קרטין<input type="checkbox" class="Collection" Id="KeratinCheck"><span class="CheckMark"></span></label>
+              </form>
+          <ul class="ItemLine" Id="ItemsList" style="list-style:none">
+              <!-- ####################Pishtan Line ###############################################################################################################-->
+              <!--Pishtan Shampoo 500 Mil-->
+              <div id="OverLay"></div>
+              <li>
+                  <div class="ItemPopUp">
+                      <button class="ClosePop" onclick="ClosePop()">X</button>
+                      <img class="ItemPopUpImg" alt="שמפו פשתן" src="תמונות מוצרים/Pishtan/Pishtan500ml.png"/>
+                      <p class="ItemPopName">שמפו פשתן</p>
+                      <p class="ItemPopPrice"> ₪33</p>
+                      <button class="AddToCart" name="1074" onclick="AddCartItem('שמפו פשתן 500 מל', '1074', '33' , 'תמונות מוצרים/Pishtan/Pishtan500ml.png')">הוסף לסל</button>
+                      <p class="AboutInv">פשתן pishtan שמפו shampoo 500  מ"לml L</p>
+                      <p class="ItemPopAbout">שמפו פשתן 500 מ"ל</p>
+                  </div>
+                  <div class="Item_Fieldset" Id="1074">
+                      <img class="ProductImg" onclick="OpenPop()"שמפו פשתן" src="תמונות מוצרים/Pishtan/Pishtan500ml.png"/>
+                      <article>
+                          <p class="Price"> ₪33</p>
+                          <button class="AddToCart" name="1074" onclick="AddCartItem('שמפו פשתן 500 מל', '1074', '33' , 'תמונות מוצרים/Pishtan/Pishtan500ml.png'), AddQuantity()">הוסף לסל</button>
+                          <p class="AboutInv">פשתן pishtan שמפו shampoo 500  מ"לml L</p>
+                          <p class="About">שמפו פשתן 500 מ"ל</p>
+                      </article>
+                  </div>
+              </li>
+              <li>
+                  <div class="ItemPopUp">
+                      <button class="ClosePop" onclick="ClosePop()">X</button>
+                      <img class="ItemPopUpImg" alt="שמפו פשתן" src="תמונות מוצרים/Pishtan/Pishtan500ml.png"/>
+                      <p class="ItemPopName">שמפו פשתן</p>
+                      <p class="ItemPopPrice"> ₪59</p>
+                      <button class="AddToCart" name="271" onclick="AddCartItem('שמפו פשתן 1 ליטר', '271', '59' ,'תמונות מוצרים/Pishtan/Pishtan1lit.png')">הוסף לסל</button>
+                      <p class="AboutInv">פשתן pishtan שמפו shampoo 1 ליטר L</p>
+                      <p class="ItemPopAbout">שמפו פשתן 1 ליטר</p>
+                  </div>
+                  <div class="Item_Fieldset" Id="271">
+                      <img class="ProductImg" onclick="OpenPop()" alt="שמפו פשתן" src="תמונות מוצרים/Pishtan/Pishtan1lit.png"/>
+                      <article>
+                          <p class="Price"> ₪59</p>
+                          <button class="AddToCart" name="271" onclick="AddCartItem('שמפו פשתן 1 ליטר', '271', '59' ,'תמונות מוצרים/Pishtan/Pishtan1lit.png'), AddQuantity()">הוסף לסל</button>
+                          <p class="AboutInv">פשתן pishtan שמפו shampoo 1 ליטר L</p>
+                          <p class="About">שמפו פשתן 1 ליטר</p>
+                      </article>
+                  </div>
+              </li>
+          </ul>
+              <div>
+                  <button id="OpCart" onclick="OpenCart()">
+                      <div id="OpQuantity">0</div>
+                      <img src=".idea/cart - Copy.png" height="48" width="69"/>
+                  </button>
+              </div>
+              <div id="Cart">
+                  <h3 class="CartHeader">סל קניות</h3>
+                  <button id="CloseCart" onclick="CloseCart()">x</button>
+                  <ul id="CartItems">
+                  </ul>
+                  <script>
+                      const AddBtn = document.querySelectorAll(".AddToCart");
+                          AddBtn.forEach(element => {
+                              element.addEventListener('click', event => {
+                                  const CartUl = document.getElementById("CartItems");
+                                  const OverAll = document.getElementById("Cost");
+                                  OverAll.name = 0;
+                                      for (let i = 0; i < CartUl.children.length; i++) {
+                                          OverAll.name += CartUl.children[i].name;
+                                          if (OverAll.name < 200) {
+                                              OverAll.innerHTML = "סך הכל: " + "₪" + OverAll.name + "<p style='scale: 0.75; position: relative; top: 40px; left: -100px;  margin: -42px 0 10px 0;'>בקניה מעל ₪200 משלוח חינם</p><br>";
+                                          } else {
+                                              OverAll.innerHTML = "סך הכל: " + "₪" + OverAll.name + "<p style='scale: 0.75; margin: -5px 0 -5px 0; position: relative; left: -220px'>* משלוח חינם</p>";
+                                          }
+                                      }
+                              });
+                          });
+                  </script>
+                  <p id="Cost">סך הכל: </p>
+                  <button id="CheckOutBtn">לתשלום</button>
+              </div>
+          </fieldset>
+      </main>
+<hr class="BottomLine">
+      <footer>
+          <div class="FooterLinksContainer">
+              <a href="html.index.html" class="FooterLinks">בית</a><br>
+              <a href="ContactUs.html" class="FooterLinks">צור קשר</a><br>
+              <a href="AboutUs.html" class="FooterLinks">אודותינו</a><br>
+          </div>
+          <div class="FooterLinksContainer">
+              <a href="Joya.html" class="FooterLinks">Joya</a><br>
+              <a href="MaroccanCollection.html" class="FooterLinks">סדרת מרוקאית</a><br>
+              <a href="KeratinCollection.html" class="FooterLinks">סדרת הקראטין</a><br>
+              <a href="OblipichaCollection.html" class="FooterLinks">סדרת אובליפיחה</a><br>
+              <a href="PishtanCollection.html" class="FooterLinks">סדרת הפשתן</a><br>
+          </div>
+          <h3 style="float: left; margin: 40px 20px 0 0; font-size: 70px; font-family: 'BIZ UDPMincho Medium'; color: #000000">Joya Cosmetics</h3>
+      </footer>
+      <script src="js.script.js"></script>
+</body>
+</html>
+
+<!--Code For Items
+              <li>
+                  <div class="Item_Fieldset" Id="1074">
+                      <img class="ProductImg" alt="שמפו פשתן" src=".idea/Product Photos/FlaxSeedShampo0.5.png" height="380" width="280"/>
+                      <article>
+                          <p class="Price"> 33₪</p>
+                          <div class="ProBtn" id='product-component-1757774689167' style="float: right"></div>
+                          <script></script>
+                          <div class="ProBtn" id='product-component-1757774799866' style="float: left"></div>
+                                                    <script></script>
+                          <p class="AboutInv"> pishtan shampoo פשתן שמפו 500 מ"ל ml</p>
+                      </article>
+                  </div>
+              </li>
+
+
+              #################### Second Line ###################
+-->

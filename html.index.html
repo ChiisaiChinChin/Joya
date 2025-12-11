@@ -1,0 +1,618 @@
+<!DOCKTYPE html>
+<html lang="he-IL" dir="rtl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Joya Cosmetics | בית</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section>
+      <nav>
+          <button class="Btn" style="background-color: var(--main-dark);color: var(--secondery-absent);b{opacity: 1;}">
+              <b>בית</b>
+          </button>
+          <!-- Company Brands DropDown Menu-->
+          <div class="DropDown">
+              <button class="DropDownBtn">
+                  <b>מותגי החברה</b>
+              </button>
+              <div class="DropDownContent">
+                  <a href="Joya.html">Joya</a>
+                  <a href="MaroccanCollection.html">סדרת מרוקאית</a>
+                  <a href="KeratinCollection.html">סדרת הקראטין</a>
+                  <a href="OblipichaCollection.html">סדרת אובליפיחה</a>
+                  <a href="PishtanCollection.html">סדרת הפשתן</a>
+              </div>
+          </div>
+          <!-- Contact Us Button-->
+          <button class="Btn" onclick="document.location='ContactUs.html'">
+              <b>צור קשר</b>
+          </button>
+          <!--Icon-->
+          <h3 class="NavBarIcon">Joya Cosmetics</h3>
+      </nav>
+  </section>
+  <main>
+      <section>
+          <!-- Slideshow container -->
+          <style>
+              * {box-sizing: border-box}
+              body {font-family: Verdana, sans-serif; margin:0}
+              .mySlides {display: none}
+              img {vertical-align: middle;}
+
+              /* Slideshow container */
+              .slideshow-container {
+                  width: 102.15%;
+                  height: 90%;
+                  position: relative;
+                  margin: 40px -20px 0 0;
+                  float: right;
+              }
+
+              /* Next & previous buttons */
+              .prev, .next {
+                  cursor: pointer;
+                  position: absolute;
+                  top: 50%;
+                  width: auto;
+                  padding: 16px;
+                  margin-top: -22px;
+                  color: #000000;
+                  font-weight: bold;
+                  font-size: 18px;
+                  transition: 0.6s ease;
+                  border-radius: 0 3px 3px 0;
+                  user-select: none;
+              }
+
+              /* Position the "next button" to the right */
+              .next {
+                  left: 0;
+                  border-radius: 3px 0 0 3px;
+              }
+
+              .prev{
+                  right: 0;
+                  border-radius: 3px 0 0 3px;
+              }
+
+              /* On hover, add a black background color with a little bit see-through */
+              .prev:hover, .next:hover {
+                  background-color: rgba(0,0,0,0.8);
+              }
+
+              /* Caption text */
+              .text {
+                  color: #000000;
+                  font-size: 20px;
+                  font-weight: bold;
+                  padding: 8px 12px;
+                  position: absolute;
+                  bottom: -60px;
+                  width: 100%;
+                  text-align: center;
+              }
+
+              /* Number text (1/3 etc) */
+              .numbertext {
+                  color: #000000;
+                  font-size: 20px;
+                  font-weight: bold;
+                  padding: 8px 12px;
+                  position: absolute;
+                  top: 0;
+              }
+
+              /* The dots/bullets/indicators */
+              .dot {
+                  cursor: pointer;
+                  height: 15px;
+                  width: 15px;
+                  margin: 80px 0 0 2px;
+                  background-color: #bbb;
+                  border-radius: 50%;
+                  display: inline-block;
+                  transition: background-color 0.6s ease;
+              }
+
+              .active, .dot:hover {
+                  background-color: #717171;
+              }
+
+              /* Fading animation */
+              .fade {
+                  animation-name: fade;
+                  animation-duration: 1.5s;
+              }
+
+              @keyframes fade {
+                  from {opacity: .4}
+                  to {opacity: 1}
+              }
+
+              /* On smaller screens, decrease text size */
+              @media only screen and (max-width: 740px) {
+                  .prev, .next,.text {font-size: 15px}
+
+                  .next{
+                      position: absolute;
+                      left: 188px;
+
+                  }
+                  .prev{
+                      position: absolute;
+                      right: 0;
+                  }
+                  .slideshow-container {
+                      width: 150%;
+                      height: 40%;
+                      position: relative;
+                      margin: 46px -20px 0 0;
+                  }
+                  .dot{
+                      display: none;
+                  }
+              }
+          </style>
+          <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src=".idea/flaxBanner.png" style="width:100%; height:100%">
+                  <div class="text"></div>
+              </div>
+
+              <div class="mySlides fade">
+                  <div class="numbertext">3 / 2</div>
+                  <img src=".idea/HemphaBanner.png" style="width:100%;  height:100%">
+                  <div class="text"></div>
+              </div>
+
+              <div class="mySlides fade">
+                  <div class="numbertext">3 / 1</div>
+                  <img src=".idea/ArganSecretBanner.png" style="width:100%;  height:100%">
+                  <div class="text"></div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+          </div>
+          <br>
+          <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <script>
+              let slideIndex = 1;
+              showSlides(slideIndex);
+
+              function plusSlides(n) {
+                  showSlides(slideIndex += n);
+              }
+
+              function currentSlide(n) {
+                  showSlides(slideIndex = n);
+              }
+
+              function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+              }
+          </script>
+
+      </section>
+      <hr class="BottomLine" style="margin: 50px 0 0 0">
+      <section>
+          <fieldset class="search" style="text-align: center">
+              <input type="text" Id="Search" placeholder="חיפוש...">
+              <form>
+                  <label class="CoOp">פשתן<input type="checkbox" class="Collection" Id="PishtanCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">סדרת "מרוקאית"<input type="checkbox" class="Collection" Id="MoroccanCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">אובליפיחה<input type="checkbox" class="Collection" Id="OblipichaCheck"><span class="CheckMark"></span></label>
+                  <label class="CoOp">קרטין<input type="checkbox" class="Collection" Id="KeratinCheck"><span class="CheckMark"></span></label>
+              </form>
+              <!-- ####################FIRST LINE #################### -->
+              <!--Pishtan Shampoo 500 Mil-->
+              <ul class="ItemLine" Id="ItemsList" title="HomePageUl" style="list-style:none">
+                  <li>
+                      <div class="Item_Fieldset" Id="1074">
+                          <img alt="שמפו פשתן" src=".idea/Product%20Photos/pishtan_Shampoo_500.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו פשתן 500 מ"ל המוסיף לחות ועיצוב לשיער</p><p class="Price"> 33₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="Serum Cream">
+                          <img alt="קרם סרום פשתן" src=".idea/Product%20Photos/Pishtan_Serum_Cream.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם סרום פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">קרם סרום פשתן המוסיף לחות ועיצוב לשיער</p><p class="Price"> 35₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="671" onclick="document.location='ProductPage671.html'">
+                          <img alt="קרם פשתן" src=".idea/Product%20Photos/Pishtan_Cream.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">קרם לחות פשתן המוסיף לחות לשיער</p><p class="Price"> 35₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="280">
+                          <img alt="סרום פשתן" src=".idea/Product%20Photos/Pishtan_Serum.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">סרום פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">סרום פשתן המוסיף ברק לשיער</p><p class="Price"> 50₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="944">
+                          <img alt="ספריי סיליקון" src=".idea/Product%20Photos/Pishtan_SiliconSpray.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">ספריי סיליקון</h3>
+                              <article>
+                                  <p class="AboutProduct">ספריי סיליקון פשתן המוסיף ברק ועיצוב לשיער</p><p class="Price"> 61₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="271">
+                          <img alt="קרם פשתן" src=".idea/Product%20Photos/Pishtan_Shampoo_1L.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו פשתן 1 ליטר המוסיף לחות ועיצוב לשיער</p><p class="Price"> 59₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="230" onclick="document.location='ProductPage230.html'">
+                          <img alt="מסכת פשתן פלוס" src=".idea/Product%20Photos/Pishtan_Mask_Plus.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מסכת פשתן פלוס</h3>
+                              <article>
+                                  <p class="AboutProduct">מסכת פשתן פלוס המוסיפה לכות וריכוך לשיער</p><p class="Price"> 53₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="612">
+                          <img alt="מסכת פשתן" src=".idea/Product%20Photos/Pishtan_Mask_Yellow.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מסכת פשתן</h3>
+                              <article>
+                                  <p class="AboutProduct">מסכת פשתן המוסיפה לכות וריכוך לשיער</p><p class="Price"> 53₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="2171">
+                          <img alt="marrocan Shampoo 500ml" src=".idea/Product Photos/Shampoo500.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 25px">שמפו MOROCCAN PURE MAGIC </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו 500מ"ל שומר על הנפח ומוסיף לחות וחוזיק לשיער</p><p class="Price"> 82₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="2170">
+                          <img alt="marrocan Shampoo 1 liter" src=".idea/Product Photos/Shampoo 1 liter.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 25px">שמפו MOROCCAN PURE MAGIC </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו 1 ליטר שומר על הנפח ומוסיף לחות וחוזיק לשיער</p><p class="Price"> 119₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="2169">
+                          <img alt="Marrocan Curls Cream" src=".idea/Product Photos/Curls Cream.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 18px">קרם לחות תלתלים MOROCCAN PURE MAGIC </h3>
+                              <article>
+                                  <p class="AboutProduct">קרם לחות תלתלים מוסיף לחות ברק וחוזק לשיער</p><p class="Price"> 78₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="2167">
+                          <img alt="Moisture Mask" src=".idea/Product Photos/Moisture Mask.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 20px">מסכת לחות MOROCCAN PURE MAGIC </h3>
+                              <article>
+                                  <p class="AboutProduct" style="font-size: 20px">מסכת לחות  המוסיפה לחות ברק חוזק וריכוך לשיער מתירה קשרים ושומרת על הנפח</p><p class="Price"> 135₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="2173">
+                          <img alt="Leave On Mask" src=".idea/Product Photos/Mask.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 18px">מסכת ללא שטיפה MOROCCAN PURE MAGIC </h3>
+                              <article>
+                                  <p class="AboutProduct" style="font-size: 20px">מסכה ללא שטיפה המוסיפה לחות ברק וריכוך לשיער מתירה קשרים ושומרת על הנפח</p><p class="Price"> 93₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="shampoo 500ml OBLIPICHA" src=".idea/Product Photos/Oblipicha Shampoo 500ml.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו אובליפיחה טיפולי ללא מלח 500 מ"ל</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="shampoo 1 liter OBLIPICHA" src=".idea/Product Photos/Oblipicha Shampoo 1liter.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו אובליפיחה טיפולי ללא מלח 1 ליטר</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="moisture cream OBLIPICHA" src=".idea/Product Photos/Oblipicha Moisture Cream.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם לחות אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">קרם לחות אובליפיחה לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Serum OBLIPICHA" src=".idea/Product Photos/Oblipicha Serum.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">סרום אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">סרום אובליפיחה המוסיף ברק וריכוך לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Silicon Spray OBLIPICHA" src=".idea/Product Photos/Oblipicha Silicon Spray.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">סרום אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">ספריי סיליקון אובליפיחה מוסיף ברק ועיצוב לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Mask OBLIPICHA" src=".idea/Product Photos/Oblipicha Mask.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מסכת אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">מסכת אובליפיחה ללא מלח המוסיפה לחות וריכוך לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Milk Glaze OBLIPICHA" src=".idea/Product Photos/Milk Glaze.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מילק גלייז אובליפיחה </h3>
+                              <article>
+                                  <p class="AboutProduct">אין תיאור למוצר זה כרגע</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <!--My Collection-->
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Keratin Shampoo" src=".idea/Product Photos/שמפו קראטין ללא מלח 500 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו קרטין </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו קרטין 500 מ"ל עוזר להתרת קשרים</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+
+                          <img alt="שמפו חמאת שיאה" src=".idea/Product Photos/שמפו חמאת שיאה 500 מל.jpg" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">שמפו חמאת שיאה </h3>
+                              <article>
+                                  <p class="AboutProduct">שמפו חמאת שיאה קרטין 500 מ"ל עוזר להתרת קשרים</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Moisture Curl Cream Keratin" src=".idea/Product Photos/קרם לחות תלתלים קראטין 500 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם לחות תלתלים קרטין </h3>
+                              <article>
+                                  <p class="AboutProduct">קרם לחות תלתלים קרטין לשיער מקורזל מתולתל וגלי</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Moisture Cream Keratin" src=".idea/Product Photos/קרם לחות קראטין 500 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם לחות קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">קרם לחות קרטין לשיער גלי</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Serum Keratin" src=".idea/Product Photos/סרום קראטין 100 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">סרום קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">סרום קרטין 100 מ"ל לשיער </p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Serum Silk Keratin" src=".idea/Product Photos/סרום משי.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">סרום משי קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">סרום משי קרטין 50 מ"ל לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Silicon Spray Keratin" src=".idea/Product Photos/ספרייי סיליקון קראטין 250 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">ספריי סיליקון קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">ספריי סיליקון קרטין 250 מ"ל לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Hair Conditioner Keratin" src=".idea/Product Photos/מרכך שיער קראטין 500 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מרכך שיער קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">מרכך שיער קרטין עוזר להתרת קשרים</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="No Salt Keratin Mask" src=".idea/Product Photos/מסכת קראטין ללא מלח 500 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מסכת קרטין ללא מלח</h3>
+                              <article>
+                                  <p class="AboutProduct">מסכת קרטין ללא מלח המוסיפה לחות וריכוך לשיער</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="No Wash Keratin Mask" src=".idea/Product Photos/מסכה ללא שטיפה קראטין 400 מל.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">מסכת קרטין ללא שטיפה</h3>
+                              <article>
+                                  <p class="AboutProduct">מסכת קרטין ללא צורך בשטיפה 400 מ"ל</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="Design Cream Keratin" src=".idea/Product Photos/מיי קולקשן קרם עיצוב וברק.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name">קרם עיצוב וברק</h3>
+                              <article>
+                                  <p class="AboutProduct">קרם עיצוב וברק לשיער </p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="Item_Fieldset" Id="">
+                          <img alt="MicroCapsules Keratin Cream" src=".idea/Product Photos/מיי קולקשן מסכת מיקרוקפסולות.png" height="320" width="280" style="float:left;"/>
+                          <fieldset class="Product_Description">
+                              <h3 class="Product_Name" style="font-size: 25px">מסכת מיקרוקפסולות קרטין</h3>
+                              <article>
+                                  <p class="AboutProduct">אין תיאור למוצר זה</p><p class="Price"> --₪</p>
+                              </article>
+                          </fieldset>
+                      </div>
+                  </li>
+              </ul>
+          </fieldset>
+      </section>
+  </main>
+  <script src="js.script.js"></script>
+<hr class="BottomLine">
+<footer>
+    <div class="FooterLinksContainer">
+        <a href="html.index.html" class="FooterLinks">בית</a><br>
+        <a href="ContactUs.html" class="FooterLinks">צור קשר</a><br>
+        <a href="AboutUs.html" class="FooterLinks">אודותינו</a><br>
+    </div>
+    <div class="FooterLinksContainer">
+        <a href="Joya.html" class="FooterLinks">Joya</a><br>
+        <a href="MaroccanCollection.html" class="FooterLinks">סדרת מרוקאית</a><br>
+        <a href="KeratinCollection.html" class="FooterLinks">סדרת הקראטין</a><br>
+        <a href="OblipichaCollection.html" class="FooterLinks">סדרת אובליפיחה</a><br>
+        <a href="PishtanCollection.html" class="FooterLinks">סדרת הפשתן</a><br>
+    </div>
+    <h3 style="float: left; margin: 40px 20px 0 0; font-size: 70px; font-family: 'BIZ UDPMincho Medium'; color: #000000">Joya Cosmetics</h3>
+</footer>
+</body>
+</html>
+
+<!--Code For Items
+    <fieldset class="Item_Fieldset" Id="MAKAT">
+        <img alt="name" src="png" height="300" width="250"/>
+        <h3> name </h3>
+
+        <article class="Product_Description">
+            <p class="AboutProduct">about</p><fieldset class="PriceContainer"><p class="Price">--₪</p></fieldset>
+        </article>
+    </fieldset>
+-->

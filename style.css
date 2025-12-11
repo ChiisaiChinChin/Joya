@@ -1,0 +1,898 @@
+body{
+    overflow-x: hidden;
+    font-family: "Arial", "bushscript", fantasy;
+    background-color: var(--main-absent);
+    padding: 20px;
+    /* -----------------------------------------------------------------------------------------*/
+    /* Colors*/
+    --main-dark: #24201D;
+    --main-absent: #ABA38F;
+    --secondery-absent: #D9D4C8;
+    --main-pop: #565538;
+    --secondery-pop: #792E29;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* Cart*/
+#Cart {
+    z-index: 2;
+    transition: 0.2s ease-in-out;
+    background: var(--secondery-absent);
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.CartHeader{
+    transition: 0.2s ease-in-out;
+    color: var(--main-dark);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.CartLine{
+    transition: 0.2s ease-in-out;
+    background: var(--secondery-absent);
+    width: 350px;
+    height: 80px;
+    margin: 2px -40px 0 20px;
+}
+
+#CloseCart{
+    transition: 0.2s ease-in-out;
+    background: var(--main-pop);
+    color: var(--secondery-absent);
+    text-align: center;
+    border: 4px solid var(--secondery-absent);
+    border-radius: 15px;
+    font-size: 35px;
+    padding: 0 8px 4px 10px;
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+#CloseCart:hover{
+    transition: 0.2s ease-in-out;
+    border: 4px solid var(--main-pop);
+    background: var(--secondery-absent);
+    color: var(--main-pop);
+}
+#CloseCart:active{
+    transition: 0.2s ease-in-out;
+    background: var(--main-pop);
+    color: var(--secondery-absent);
+}
+#OpQuantity{
+    transition: 0.2s ease-in-out;
+    position: fixed;
+    top: 32%;
+    right: 0.5%;
+    background: var(--secondery-absent);
+    color: var(--secondery-pop);
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 0 5px;
+
+    border-radius: 40%;
+}
+#OpCart{
+    transition: 0.2s ease-in-out;
+    position: fixed;
+    top: 30%;
+    right: 0;
+
+    text-align: center;
+
+    border-radius: 20px 0 0 20px;
+    border: 4px solid var(--main-pop);
+    background:var(--main-pop);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    height: 110px;
+    width: 75px;
+
+}
+#OpCart:Hover{
+    transition: 0.2s ease-in-out;
+    background:var(--secondery-absent);
+    border: 4px solid var(--secondery-absent);
+    color: var(--main-pop);
+}
+div:has(#OpCart:hover) #OpCart > img{
+    transition: 0.2s ease-in-out;
+    scale: 0.95;
+    filter: invert(100%) sepia(100%) saturate(500%) hue-rotate(0deg);
+}
+
+#OpCart > img{
+    position: fixed;
+    scale: 0.85;
+    top: 35%;
+    right: 0;
+}
+
+    /* -----------------------------------------------------------------------------------------*/
+    .search{
+        @media screen and (min-width: 780px) {
+            margin: 100px 50px 0 0;
+        }
+    }
+    #Search{
+        background-color: var(--secondery-absent);
+        border: 1px solid var(--main-dark);
+        color:var(--main-dark);
+        border-radius: 20px;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        @media screen and (min-width: 780px) {
+            scale: 125%;
+            width: 500px;
+            height: 30px;
+            font-size: 16px;
+        }
+        @media screen and (max-width: 780px) {
+
+        }
+    }
+    #search:focus{
+        transition: 0.2s ease-in-out;
+        border: 5px solid var(--main-dark);
+        outline: none;
+    }
+    #Search::placeholder{
+        transition: 0.2s ease-in-out;
+        color: var(--main-dark);
+        font-family: "Arial", "bushscript", fantasy;
+        font-weight: bold;
+    }
+    #search:focus::placeholder{
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Containers */
+    fieldset{
+        transition: 0.2s ease-in-out;
+        display: block;
+        border: none;
+        fill-opacity: 1;
+        text-align: right;
+    }
+
+    nav{
+        text-align: right;
+        display: block;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background-color: var(--main-absent);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .ItemLine{
+        @media screen and (min-width: 780px) {
+            margin: 100px 0 0 0;
+            text-align: left;
+        }
+    }
+
+    /* -----------------------------------------------------------------------------------------*/
+    li{
+        transition: 0.2s ease-in-out;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    li.hidden{
+        transition: 0.2s ease-in-out;
+        display: none;
+        opacity: 0;
+        height: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+    }
+
+    /* -----------------------------------------------------------------------------------------*/
+    /*Price Container*/
+    .PriceContainer{
+        border: 5px solid;
+        fill-opacity: 1;
+        display: inline-block;
+        text-align: center;
+    }
+    /* Text In Product Boxes*/
+    .Price{
+        transition: 0.2s ease-in-out;
+        text-align: center;
+        display: inline-block;
+        font-size: 25px;
+        color: var(--main-dark);
+        font-weight: bold;
+        font-family: "Arial", "bushscript", fantasy;
+        padding: 10px;
+        margin: -5px 40px 0 0;
+        float: right;
+        @media screen and (min-width: 780px) {
+            width: 50px;
+        }
+    }
+.ProductImg:hover{
+    transition: 0.2s ease-in-out;
+    border: 5px solid var(--secondery-absent);
+}
+
+.AboutInv{
+   display: none;
+}
+
+.About{
+    transition: 0.2s ease-in-out;
+    direction: rtl;
+    position: relative;
+    right: -90px;
+    top: -10px;
+    color: var(--main-dark);
+    font-size: 18px;
+}
+
+.ProductImg{
+    transition: 0.2s ease-in-out;
+    z-index: 0;
+    border: 5px solid var(--main-pop);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    @media screen and (min-width: 780px) {
+        height: 240px;
+        width: 240px;
+    }
+}
+
+.Item_Fieldset{
+    transition: 0.2s ease-in-out;
+    @media screen and (min-width: 780px) {
+        width: 290px;
+    }
+    margin: 0;
+}
+
+.Item_Fieldset:hover{
+    transition: 0.3s ease-in-out;
+    @media screen and (min-width: 780px) {
+        scale: 1.02;
+    }
+}
+
+.Item_Fieldset:has(.ProductImg:hover) .Price{
+
+}
+.Item_Fieldset:has(.Price:hover) .ProductImg{
+
+}
+
+li:has(.Item_Fieldset:hover) .ProductImg{
+
+}
+li:has(.Item_Fieldset:hover) .Price{
+    color: var(--main-pop);
+}
+
+
+.AddToCart{
+    transition: 0.4s ease-in-out;
+    border: 1px solid var(--main-pop);
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 2px;
+    background-color: var(--main-pop);
+    color: var(--secondery-absent);
+    font-family: "Arial", "bushscript", fantasy;
+    font-weight: bold;
+    font-size: 17px;
+    @media screen and (min-width: 780px) {
+        width: 150px;
+        height: 35px;
+    }
+}
+
+
+#CheckOutBtn{
+    transition: 0.4s ease-in-out;
+    position: absolute;
+    bottom: 40px;
+    right: 35px;
+    border: 1px solid var(--main-pop);
+    display: inline-block;
+    border-radius: 5px;
+
+    padding: 10px;
+    @media screen and (min-width: 780px) {
+        width: 80%;
+        height: 50px;
+    }
+    background-color: var(--main-pop);
+    color: var(--secondery-absent);
+    font-family: "Arial", "bushscript", fantasy;
+    font-weight: bold;
+    font-size: 17px;
+}
+#checkOutBtn:hover{
+    transition: 0.4s ease-in-out;
+    border: 5px solid var(--main-pop);
+    background-color: var(--secondery-absent);
+    color: var(--main-pop);
+}
+
+#Cost{
+    font-weight: bold;
+    position: absolute;
+    @media screen and (min-width: 780px) {
+        font-size: 20px;
+        bottom: 80px;
+        right: 35px;
+    }
+}
+
+.ClosePop{
+    transition: 0.4s ease-in-out;
+    position: relative;
+    bottom: 400px;
+    left: 150px;
+    border-radius: 50px;
+    scale: 2;
+    color: var(--secondery-absent);
+    background-color: var(--main-pop);
+    border: none;
+}
+
+.ClosePop:focus{
+    transition: 0.05s ease-in-out;
+    scale: 2.25;
+}
+
+.ClosePop:hover{
+    transition: 0.4s ease-in-out;
+    color: var(--main-pop);
+    background-color: var(--secondery-absent);
+}
+.ItemPopUp{
+    display: none;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    z-index: 2;
+    background-color: var(--main-dark);
+    border-radius: 15px;
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    margin: auto;
+    top: 150px;
+    right: 25%;
+}
+#OverLay{
+    display: none;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    z-index: 1;
+    opacity: 0.5;
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 200px solid rgba(0, 0 ,0, 1);
+    background-color: rgba(0, 0 ,0, 1);
+    background-clip: padding-box;
+    margin: auto;
+}
+.ItemPopUpImg{
+    transition: 0.4s ease-in-out;
+    z-index: 0;
+    display: inline-block;
+    border-radius: 15px;
+    border: 5px solid var(--secondery-absent);
+    width: 350px;
+    height: 450px;
+    position: relative;
+    top: 70px;
+    right: 370px;
+}
+.ItemPopUpImg:hover{
+    transition: 0.2s ease-in-out;
+    scale: 1.025;
+}
+.ItemPopPrice{
+    transition: 0.4s ease-in-out;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 350px;
+    left: 600px;
+    color: var(--secondery-absent);
+    font-weight: bold;
+    font-size: 25px;
+}
+.ItemPopPrice:hover{
+    transition: 0.2s ease-in-out;
+    scale: 1.1;
+}
+.ItemPopAbout{
+    transition: 0.4s ease-in-out;
+    position: relative;
+    bottom: 350px;
+    left: 625px;
+    color: var(--secondery-absent);
+    font-weight: bold;
+    font-size: 20px;
+}
+.ItemPopAbout:hover{
+    transition: 0.2s ease-in-out;
+    scale: 1.025;
+}
+.ItemPopName{
+    transition: 0.4s ease-in-out;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    bottom: 400px;
+    left: 455px;
+    color: var(--secondery-absent);
+    font-weight: bold;
+    font-size: 30px;
+}
+.ItemPopName:hover{
+    transition: 0.2s ease-in-out;
+    scale: 1.1;
+}
+.ItemPopUp > .AddToCart{
+    transition: 0.4s ease-in-out;
+    position: relative;
+    left: 450px;
+    bottom: 355px;
+    border: 1px solid var(--main-pop);
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 2px;
+    background-color: var(--main-pop);
+    color: var(--secondery-absent);
+    font-family: "Arial", "bushscript", fantasy;
+    font-weight: bold;
+    font-size: 17px;
+    @media screen and (min-width: 780px) {
+        width: 150px;
+        height: 35px;
+    }
+}
+.AddToCart:hover{
+    transition: 0.4s ease-in-out;
+    background: var(--secondery-absent);
+    color: var(--main-pop);
+    border: 5px solid  var(--main-pop);
+    padding: 0;
+}
+
+.AddToCart:active{
+    background-color: var(--main-pop);
+    color: var(--secondery-absent);
+    transition: 0.2s ease-in-out;
+    scale: 1.15;
+}
+
+
+
+/* -----------------------------------------------------------------------------------------*/
+/* Style For Collection Fillter*/
+.CoOp{
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+.CoOp input {
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    transition: 0.2s ease-in-out;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--secondery-absent);
+}
+/* On mouse-over, add a grey background color */
+.CoOp:hover input ~ .checkmark {
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-pop);
+}
+
+/* When the checkbox is checked, add a blue background */
+.CoOp input:checked ~ .checkmark {
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-pop);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.CoOp:after {
+    transition: 0.2s ease-in-out;
+    color: var(--main-pop);
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.CoOp input:checked ~ .checkmark:after {
+    transition: 0.2s ease-in-out;
+    content: "";
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.CoOp .checkmark:after {
+    transition: 0.2s ease-in-out;
+    position: relative;
+    left: -7px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid  var(--secondery-absent);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+.Collection{
+    transition: 0.2s ease-in-out;
+    scale: 130%;
+    margin: 30px 10px 30px 0;
+}
+
+input[type='checkbox'] {
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-pop);
+    color: var(--main-pop);
+}
+
+
+/* -----------------------------------------------------------------------------------------*/
+/* General text */
+h1 {
+    font-size: 60px;
+    font-style: italic;
+    font-family: "Arial", "bushscript", fantasy;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 0.5rem 0;
+    padding-top: 15px;
+}
+h2 {
+    font-family: "Arial", "bushscript", fantasy;
+    display: block;
+    margin: 0.5rem 0;
+    padding: 35px;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: "Arial", "bushscript", fantasy;
+    display: block;
+    font-size: 40px;
+    margin: 0 0;
+    padding: 5px;
+}
+h4{
+    font-size: 30px;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/*Drop Box*/
+.DropDown{
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+    margin: 0 0 0 7%;
+}
+.DropDownBtn{
+    transition: 0.2s ease-in-out;
+    color: var(--main-dark);
+    background-color: var(--main-absent);
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+    border: none;
+    border-radius: 0 0 10px 10px;
+    display: inline-block;
+
+    margin: -20px 0 -20px -50px;
+    padding: 40px;
+
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Arial", "bushscript", fantasy;
+    font-size: 20px;
+    @media screen and (min-width: 780px) {
+        width: 240px;
+        height: 30px;
+    }
+}
+.Btn{
+    transition: 0.2s ease-in-out;
+    color: var(--main-dark);
+    background: none;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+    border: none;
+    border-radius: 0 0 10px 10px;
+    display: inline-block;
+
+    margin: -20px 0 -20px 100px;
+    padding: 20px;
+
+    text-align: center;
+    text-decoration: underline;
+    font-family: "Arial", "bushscript", fantasy;
+    font-size: 20px;
+    @media screen and (min-width: 780px) {
+        width: 240px;
+    }
+}
+.DropDownContent{
+    transition: 0.2s ease-in-out;
+    display: none;
+    position: absolute;
+    background-color: var(--main-dark);
+    border: 12px solid var(--main-dark);
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    @media screen and (min-width: 780px) {
+        min-width: 250px;
+    }
+}
+
+.DropDownContent a {
+    transition: 0.2s ease-in-out;
+    color: var(--secondery-absent);
+    font-weight: bold;
+    background-color: var(--main-dark);
+    border-radius: 15px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.DropDownContent a:hover {background-color:var(--secondery-absent); color: var(--main-dark); transition: 0.2s ease-in-out;}
+
+/* Show the dropdown menu on hover */
+.DropDown:hover .DropDownContent {display: block; transition: 0.2s ease-in-out;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.DropDown:hover .DropDownBtn {background-color: var(--main-dark); color: var(--secondery-absent); transition: 0.2s ease-in-out;}
+/* -----------------------------------------------------------------------------------------*/
+
+/*Button Function*/
+button:hover {
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-dark);
+    color: var(--secondery-absent);
+    b{
+        opacity: 1;
+    }
+}
+
+button:active {
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-dark);
+    color: var(--main-absent);
+    opacity: 1;
+}
+/* -----------------------------------------------------------------------------------------*/
+/*Line*/
+.BottomLine{
+    transition: 0.2s ease-in-out;
+    background-color:var(--main-dark);
+    border: none;
+    height: 5px;
+    margin: 0 0 0 0;
+}
+/* -----------------------------------------------------------------------------------------*/
+/* image*/
+
+
+/* -----------------------------------------------------------------------------------------*/
+/*Font*/
+@font-face{
+    font-family: "papyrus", fantasy;
+    font-weight: 700; /*(bold)*/
+    font-style: normal;
+}
+/* -----------------------------------------------------------------------------------------*/
+/*Scroll Bar/
+  /* width */
+::-webkit-scrollbar {
+    transition: 0.2s ease-in-out;
+    width: 5px;
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    transition: 0.2s ease-in-out;
+    background: var(--secondery-absent);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    transition: 0.2s ease-in-out;
+    background: var(--main-dark);
+    opacity: 80%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    transition: 0.2s ease-in-out;
+    background: var(--main-dark);
+    opacity: 40%;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/*Cart Button On nav bar*/
+#CartBtn{
+    transition: 0.2s ease-in-out;
+    float: left;
+    margin: 5px;
+    @media screen and (min-width: 780px) {
+        width: 60px;
+    }
+}
+#CartBtn:hover{
+    .img{
+        transition: 0.2s ease-in-out;
+        color: var(--main-dark);
+    }
+}
+#CartImg{
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    @media screen and (min-width: 780px) {
+        scale: 125%;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/*Joya Cosmetics Style in nav bar*/
+.NavBarIcon{
+    transition: 0.2s ease-in-out;
+    color: var(--main-dark);
+    display: inline-block;
+    float: left;
+    margin: 5px 40px 5px 10px;
+    font-size: 40px;
+    font-family: "BIZ UDPMincho Medium";
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/*footer styles*/
+.FooterLinksContainer{
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    float: right;
+}
+.FooterLinks{
+    transition: 0.2s ease-in-out;
+    margin: 10px;
+    color: var(--main-dark);
+    @media screen and (min-width: 780px) {
+        font-size: 20px;
+    }
+}
+.FooterLinks:hover{
+    transition: 0.2s ease-in-out;
+    color: var(--main-dark);
+    opacity: 70%;
+    @media screen and (min-width: 780px) {
+        font-size: 22px;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/*Contact Form Style*/
+#Contact_Form{
+    transition: 0.2s ease-in-out;
+    background: var(--main-dark);
+    color: var(--secondery-absent);
+    margin: 3%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#firstName, #email, #message{
+    transition: 0.2s ease-in-out;
+    background-color: var(--secondery-absent);
+    padding: 10px;
+    border: 2px solid var(--secondery-absent);
+    border-radius: 5px;
+    resize: none;
+    @media screen and (min-width: 780px) {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+#message{
+    @media screen and (min-width: 780px) {
+        height: 300px;
+    }
+}
+
+#firstName:focus, #email:focus, #message:focus{
+    transition: 0.2s ease-in-out;
+    background-color: var(--secondery-absent);
+    padding: 10px;
+    border: 2px solid var(--secondery-absent);
+    border-radius: 5px;
+    outline: none;
+}
+
+#Send{
+    transition: 0.2s ease-in-out;
+    background: var(--main-pop);
+    color: var(--secondery-absent);
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    outline: none;
+    border: var(--main-dark) solid 2px;
+    border-radius: 5px;
+    @media screen and (min-width: 780px) {
+        font-size: 20px;
+        width: 200px;
+    }
+}
+
+#send:hover{
+    transition: 0.2s ease-in-out;
+    border: var(--main-pop) solid 3px;
+    color: var(--main-pop);
+    background-color: var(--secondery-absent);
+}
+
+/* -----------------------------------------------------------------------------------------*/
+

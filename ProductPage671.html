@@ -1,0 +1,342 @@
+<!DOCKTYPE html>
+<html lang="he-IL" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>Joya Cosmetics | Pishtan Mask Plus</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <section>
+      <nav>
+          <button class="DropDownBtn" onclick="document.location='html.index.html'">
+              <b>בית</b>
+          </button>
+          <!-- Company Brands DropDown Menu-->
+          <div class="DropDown">
+              <button class="DropDownBtn" style="width: 200%;">
+                  <b>מותגי החברה</b>
+              </button>
+              <div class="DropDownContent">
+                  <a href="Joya.html">Joya</a>
+                  <a href="MaroccanCollection.html">סדרת מרוקאית</a>
+                  <a href="KeratinCollection.html">סדרת הקראטין</a>
+                  <a href="OblipichaCollection.html">סדרת אובליפיחה</a>
+              </div>
+          </div>
+          <!-- Contact Us Button-->
+          <button class="DropDownBtn" onclick="document.location='ContactUs.html'" >
+              <b>צור קשר</b>
+          </button>
+          <!--Icon-->
+          <h3 class="NavBarIcon">Joya Cosmetics</h3>
+          <!-- Shopping Cart Button-->
+          <button class="DropDownBtn" id="CartBtn">
+              <img src=".idea/cart - Copy.png" height="24" width="36" id="CartImg"/>
+          </button>
+      </nav>
+  </section>
+  <section>
+      <div id='product-component-1755350411559'  style="margin: 5% 50% 5% 5%; position: relative"></div>
+      <script type="text/javascript">
+          /*<![CDATA[*/
+          (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                  if (window.ShopifyBuy.UI) {
+                      ShopifyBuyInit();
+                  } else {
+                      loadScript();
+                  }
+              } else {
+                  loadScript();
+              }
+              function loadScript() {
+                  var script = document.createElement('script');
+                  script.async = true;
+                  script.src = scriptURL;
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                  script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                  var client = ShopifyBuy.buildClient({
+                      domain: 'j0t1dt-3q.myshopify.com',
+                      storefrontAccessToken: '0482649c1da330a7e09c211e87d642a2',
+                  });
+                  ShopifyBuy.UI.onReady(client).then(function (ui) {
+                      ui.createComponent('product', {
+                          id: '8918406365433',
+                          node: document.getElementById('product-component-1755350411559'),
+                          moneyFormat: '%7B%7Bamount%7D%7D%20NIS',
+                          options: {
+                              "product": {
+                                  "styles": {
+                                      "product": {
+                                          "@media (min-width: 601px)": {
+                                              "max-width": "100%",
+                                              "margin-left": "0",
+                                              "margin-bottom": "50px"
+                                          },
+                                          "text-align": "left"
+                                      },
+                                      "title": {
+                                          "font-size": "26px",
+                                          "color": "#8c916c"
+                                      },
+                                      "button": {
+                                          ":hover": {
+                                              "background-color": "#7e8361"
+                                          },
+                                          "background-color": "#8c916c",
+                                          ":focus": {
+                                              "background-color": "#7e8361"
+                                          }
+                                      },
+                                      "price": {
+                                          "font-size": "18px",
+                                          "color": "#8c916c"
+                                      },
+                                      "compareAt": {
+                                          "font-size": "15.299999999999999px",
+                                          "color": "#8c916c"
+                                      },
+                                      "unitPrice": {
+                                          "font-size": "15.299999999999999px",
+                                          "color": "#8c916c"
+                                      },
+                                      "description": {
+                                          "font-size": "17px",
+                                          "color": "#8c916c"
+                                      }
+                                  },
+                                  "layout": "horizontal",
+                                  "contents": {
+                                      "img": false,
+                                      "imgWithCarousel": true,
+                                      "button": false,
+                                      "buttonWithQuantity": true,
+                                      "description": true
+                                  },
+                                  "width": "100%",
+                                  "text": {
+                                      "button": "הוסף לסל"
+                                  }
+                              },
+                              "productSet": {
+                                  "styles": {
+                                      "products": {
+                                          "@media (min-width: 601px)": {
+                                              "margin-left": "-20px"
+                                          }
+                                      }
+                                  }
+                              },
+                              "modalProduct": {
+                                  "contents": {
+                                      "img": false,
+                                      "imgWithCarousel": true,
+                                      "button": false,
+                                      "buttonWithQuantity": true
+                                  },
+                                  "styles": {
+                                      "product": {
+                                          "@media (min-width: 601px)": {
+                                              "max-width": "100%",
+                                              "margin-left": "0px",
+                                              "margin-bottom": "0px"
+                                          }
+                                      },
+                                      "button": {
+                                          ":hover": {
+                                              "background-color": "#7e8361"
+                                          },
+                                          "background-color": "#8c916c",
+                                          ":focus": {
+                                              "background-color": "#7e8361"
+                                          }
+                                      },
+                                      "title": {
+                                          "font-family": "Helvetica Neue, sans-serif",
+                                          "font-weight": "bold",
+                                          "font-size": "26px",
+                                          "color": "#4c4c4c"
+                                      },
+                                      "price": {
+                                          "font-family": "Helvetica Neue, sans-serif",
+                                          "font-weight": "normal",
+                                          "font-size": "18px",
+                                          "color": "#4c4c4c"
+                                      },
+                                      "compareAt": {
+                                          "font-family": "Helvetica Neue, sans-serif",
+                                          "font-weight": "normal",
+                                          "font-size": "15.299999999999999px",
+                                          "color": "#4c4c4c"
+                                      },
+                                      "unitPrice": {
+                                          "font-family": "Helvetica Neue, sans-serif",
+                                          "font-weight": "normal",
+                                          "font-size": "15.299999999999999px",
+                                          "color": "#4c4c4c"
+                                      },
+                                      "description": {
+                                          "font-family": "Helvetica Neue, sans-serif",
+                                          "font-weight": "normal",
+                                          "font-size": "14px",
+                                          "color": "#4c4c4c"
+                                      }
+                                  },
+                                  "text": {
+                                      "button": "Add to cart"
+                                  }
+                              },
+                              "option": {},
+                              "cart": {
+                                  "styles": {
+                                      "button": {
+                                          ":hover": {
+                                              "background-color": "#7e8361"
+                                          },
+                                          "background-color": "#8c916c",
+                                          ":focus": {
+                                              "background-color": "#7e8361"
+                                          }
+                                      },
+                                      "title": {
+                                          "color": "#8c916c"
+                                      },
+                                      "header": {
+                                          "color": "#8c916c"
+                                      },
+                                      "lineItems": {
+                                          "color": "#8c916c"
+                                      },
+                                      "subtotalText": {
+                                          "color": "#8c916c"
+                                      },
+                                      "subtotal": {
+                                          "color": "#8c916c"
+                                      },
+                                      "notice": {
+                                          "color": "#8c916c"
+                                      },
+                                      "currency": {
+                                          "color": "#8c916c"
+                                      },
+                                      "close": {
+                                          "color": "#8c916c",
+                                          ":hover": {
+                                              "color": "#8c916c"
+                                          }
+                                      },
+                                      "empty": {
+                                          "color": "#8c916c"
+                                      },
+                                      "noteDescription": {
+                                          "color": "#8c916c"
+                                      },
+                                      "discountText": {
+                                          "color": "#8c916c"
+                                      },
+                                      "discountIcon": {
+                                          "fill": "#8c916c"
+                                      },
+                                      "discountAmount": {
+                                          "color": "#8c916c"
+                                      }
+                                  },
+                                  "text": {
+                                      "title": "סל קניות",
+                                      "total": "סך הכל",
+                                      "empty": "סל הקניות ריק",
+                                      "notice": "",
+                                      "button": "לתשלום"
+                                  },
+                                  "popup": false
+                              },
+                              "toggle": {
+                                  "styles": {
+                                      "toggle": {
+                                          "background-color": "#8c916c",
+                                          ":hover": {
+                                              "background-color": "#7e8361"
+                                          },
+                                          ":focus": {
+                                              "background-color": "#7e8361"
+                                          }
+                                      }
+                                  }
+                              },
+                              "lineItem": {
+                                  "styles": {
+                                      "variantTitle": {
+                                          "color": "#8c916c"
+                                      },
+                                      "title": {
+                                          "color": "#8c916c"
+                                      },
+                                      "price": {
+                                          "color": "#8c916c"
+                                      },
+                                      "fullPrice": {
+                                          "color": "#8c916c"
+                                      },
+                                      "discount": {
+                                          "color": "#8c916c"
+                                      },
+                                      "discountIcon": {
+                                          "fill": "#8c916c"
+                                      },
+                                      "quantity": {
+                                          "color": "#8c916c"
+                                      },
+                                      "quantityIncrement": {
+                                          "color": "#8c916c",
+                                          "border-color": "#8c916c"
+                                      },
+                                      "quantityDecrement": {
+                                          "color": "#8c916c",
+                                          "border-color": "#8c916c"
+                                      },
+                                      "quantityInput": {
+                                          "color": "#8c916c",
+                                          "border-color": "#8c916c"
+                                      }
+                                  }
+                              }
+                          },
+                      });
+                  });
+              }
+          })();
+          /*]]>*/
+      </script>
+  </section>
+<hr class="BottomLine">
+  <footer>
+      <div class="FooterLinksContainer">
+          <a href="html.index.html" class="FooterLinks">בית</a><br>
+          <a href="ContactUs.html" class="FooterLinks">צור קשר</a><br>
+          <a href="AboutUs.html" class="FooterLinks">אודותינו</a><br>
+      </div>
+      <div class="FooterLinksContainer">
+          <a href="Joya.html" class="FooterLinks">Joya</a><br>
+          <a href="MaroccanCollection.html" class="FooterLinks">סדרת מרוקאית</a><br>
+          <a href="KeratinCollection.html" class="FooterLinks">סדרת הקראטין</a><br>
+          <a href="OblipichaCollection.html" class="FooterLinks">סדרת אובליפיחה</a><br>
+          <a href="PishtanCollection.html" class="FooterLinks">סדרת הפשתן</a><br>
+      </div>
+      <h3 style="float: left; margin: 40px 20px 0 0; font-size: 70px; font-family: 'BIZ UDPMincho Medium'; color: #8C916C">Joya Cosmetics</h3>
+  </footer>
+</body>
+</html>
+
+<!--Code For Items
+    <fieldset class="Item_Fieldset" Id="MAKAT">
+        <img alt="name" src="png" height="300" width="250"/>
+        <h3> name </h3>
+
+        <article class="Product_Description">
+            <p class="AboutProduct">about</p><fieldset class="PriceContainer"><p class="Price">--₪</p></fieldset>
+        </article>
+    </fieldset>
+-->
